@@ -29,4 +29,20 @@ public class Telefone {
     public Integer getNumero() {
         return numero;
     }
+
+    @Override
+    public String toString() {
+        if(tipoTelefone != null) {
+            return "Telefone{" +
+                    "tipoTelefone=" + tipoTelefone.getDescricao() +
+                    ", ddd=" + ddd +
+                    ", numero=" + numero +
+                    '}';
+        }
+        return "Telefone{" +
+                "tipoTelefone=" + tipoTelefone  +
+                ", ddd=" + ddd +
+                ", numero=" + numero +
+                '}';
+    }
 }

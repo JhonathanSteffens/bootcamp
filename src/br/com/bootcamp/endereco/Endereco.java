@@ -37,4 +37,13 @@ public class Endereco {
     public String getBairro() {
         return bairro;
     }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "endereco='" + endereco + '\'' +
+                ", numero=" + numero +
+                ", bairro='" + bairro + '\'' +
+                '}';
+    }
 }

@@ -71,4 +71,17 @@ public class Pessoa {
     public List<Telefone> getTelefoneList() {
         return telefoneList;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", email='" + email + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                ", enderecoList=" + enderecoList +
+                ", telefoneList=" + telefoneList +
+                '}';
+    }
 }

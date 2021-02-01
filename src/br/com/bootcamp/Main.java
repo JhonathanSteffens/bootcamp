@@ -2,6 +2,8 @@ package br.com.bootcamp;
 
 import br.com.bootcamp.endereco.Endereco;
 import br.com.bootcamp.pessoa.Pessoa;
+import br.com.bootcamp.telefone.Telefone;
+import br.com.bootcamp.telefone.TipoTelefone;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -12,7 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         Pessoa pessoa = new Pessoa();
-        pessoa.setNome("Debora");
+        pessoa.setNome("Jhonathan");
         pessoa.setSobrenome("Steffens");
         pessoa.setCpf("03232323");
         pessoa.setEmail("jhony_steffens@hotmail.com");
@@ -22,6 +24,12 @@ public class Main {
         Endereco endereco = new Endereco("R.Tupy", 123, "Centro");
         enderecoList.add(endereco);
         pessoa.setEnderecoList(enderecoList);
-        pessoa.getTelefoneList().add();
+        Telefone telefone = new Telefone();
+        telefone.setTipoTelefone(TipoTelefone.CELULAR);
+        telefone.setDdd(46);
+        telefone.setNumero(12345);
+        pessoa.setTelefoneList(new ArrayList<>());
+        pessoa.getTelefoneList().add(telefone);
+        System.out.println(pessoa);
     }
 }
