@@ -58,5 +58,16 @@ public class Pessoa {
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", email='" + email + '\'' +
+                ", dataNascimento=" + dataNascimento +
+                '}';
+    }
 }
 
