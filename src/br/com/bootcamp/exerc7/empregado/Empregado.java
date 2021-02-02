@@ -1,6 +1,6 @@
-package br.com.bootcamp.exerc6.empregado;
+package br.com.bootcamp.exerc7.empregado;
 
-import br.com.bootcamp.exerc6.pessoa.Pessoa;
+import br.com.bootcamp.exerc7.pessoa.Pessoa;
 
 public class Empregado extends Pessoa {
 

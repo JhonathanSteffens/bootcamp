@@ -1,6 +1,6 @@
-package br.com.bootcamp.exerc6.empregadocomicionado;
+package br.com.bootcamp.exerc7.empregadocomicionado;
 
-import br.com.bootcamp.exerc6.empregado.Empregado;
+import br.com.bootcamp.exerc7.empregado.Empregado;
 
 public class EmpregadoComicionado extends Empregado {
     private double valorProdutosVendidos;
@@ -23,5 +23,13 @@ public class EmpregadoComicionado extends Empregado {
     @Override
     public double calculaValorTotalSalario() {
         return getValorSalarioBase() + valorComissao - getValorImpostos();
+    }
+
+    public double getValorProdutosVendidos() {
+        return valorProdutosVendidos;
+    }
+
+    public void setValorProdutosVendidos(double valorProdutosVendidos) {
+        this.valorProdutosVendidos = valorProdutosVendidos;
     }
 }

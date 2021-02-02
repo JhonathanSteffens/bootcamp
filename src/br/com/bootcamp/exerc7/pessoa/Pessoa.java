@@ -1,4 +1,4 @@
-package br.com.bootcamp.exerc6.pessoa;
+package br.com.bootcamp.exerc7.pessoa;
 
 public class Pessoa {
 
