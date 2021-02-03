@@ -54,6 +54,7 @@ public class Exerc8 {
 
         banco.inserir(contaDoJhonyPoupanca);
         banco.inserir(contaDoJhonyCorrente);
+        banco.inserir(contaDoJhonyCorrente);
         System.out.println("O banco procurado é: "+  banco.procurar(2));
     }
 }

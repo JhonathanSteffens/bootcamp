@@ -9,7 +9,12 @@ public class Banco {
     List<ContaBancaria> contaBancariasList = new ArrayList<>();
 
     public void inserir(ContaBancaria conta) {
-
+        for(int i = 0; i < contaBancariasList.size(); i++){
+            if (contaBancariasList.get(i).numeroDaConta == conta.numeroDaConta) {
+                System.out.println("A conta já existe!");
+                return;
+            }
+        }
         contaBancariasList.add(conta);
     }
 
@@ -18,13 +23,11 @@ public class Banco {
     }
 
     public ContaBancaria procurar(Integer numeroConta){
-            if (!(contaBancariasList.size() == 0)){
                 for(int i = 0; i < contaBancariasList.size(); i++){
                     if (contaBancariasList.get(i).numeroDaConta == numeroConta) {
                         return contaBancariasList.get(i);
                     }
                 }
-            }
         return null;
     }
 }
