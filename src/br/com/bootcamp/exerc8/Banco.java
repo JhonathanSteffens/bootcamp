@@ -9,6 +9,7 @@ public class Banco {
     List<ContaBancaria> contaBancariasList = new ArrayList<>();
 
     public void inserir(ContaBancaria conta) {
+
         contaBancariasList.add(conta);
     }
 
