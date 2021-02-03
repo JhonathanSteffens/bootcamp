@@ -11,6 +11,6 @@ public class Quadrado extends FiguraGeometrica{
 
     @Override
     public void getArea() {
-        System.out.println("A área é: " + lado1*lado2);
+        System.out.println("A área do quadrado é: " + lado1*lado2);
     }
 }
