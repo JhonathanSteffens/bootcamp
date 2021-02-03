@@ -18,7 +18,7 @@ public class Exerc8 {
         BigDecimal saquePoupanca = new BigDecimal(17000);
         BigDecimal depositoPoupanca = new BigDecimal(15000);
 
-        ContaBancaria contaDoJhonyPoupanca = new ContaPoupanca(001,saldoPoupanca,taxaOperacao);
+        ContaBancaria contaDoJhonyPoupanca = new ContaPoupanca(1,saldoPoupanca,taxaOperacao);
         contaDoJhonyPoupanca.depositar(depositoPoupanca);
         contaDoJhonyPoupanca.sacar(saquePoupanca);
 
@@ -30,7 +30,7 @@ public class Exerc8 {
         BigDecimal saqueCorrente = new BigDecimal(165000);
         BigDecimal saqueCorrente2 = new BigDecimal(5000);
 
-        ContaBancaria contaDoJhonyCorrente = new ContaCorrente(001,saldoCorrente, limite);
+        ContaBancaria contaDoJhonyCorrente = new ContaCorrente(2,saldoCorrente, limite);
 
         contaDoJhonyCorrente.sacar(saqueCorrente);
         contaDoJhonyCorrente.depositar(depositoCorrente);
@@ -49,7 +49,11 @@ public class Exerc8 {
 
         Relatorio relatorio2 = new Relatorio();
         relatorio2.gerar((Imprimivel) contaDoJhonyPoupanca);
+
+        Banco banco = new Banco();
+
+        banco.inserir(contaDoJhonyPoupanca);
+        banco.inserir(contaDoJhonyCorrente);
+        System.out.println("O banco procurado é: "+  banco.procurar(2));
     }
-
-
 }
