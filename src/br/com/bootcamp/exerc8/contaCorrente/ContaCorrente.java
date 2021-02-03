@@ -1,10 +1,11 @@
 package br.com.bootcamp.exerc8.contaCorrente;
 
+import br.com.bootcamp.exerc8.Imprimivel;
 import br.com.bootcamp.exerc8.contaBancaria.ContaBancaria;
 
 import java.math.BigDecimal;
 
-public class ContaCorrente extends ContaBancaria {
+public class ContaCorrente extends ContaBancaria implements Imprimivel {
 
     private final BigDecimal limiteTotal;
     private BigDecimal limite;
@@ -50,4 +51,19 @@ public class ContaCorrente extends ContaBancaria {
         }
     }
 
+    @Override
+    public String toString() {
+        return "ContaCorrente{" +
+                "numeroDaConta=" + numeroDaConta +
+                ", saldo=" + saldo +
+                ", limiteTotal=" + limiteTotal +
+                ", limite=" + limite +
+                '}';
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println(toString());
+
+    }
 }

@@ -1,5 +1,6 @@
 package br.com.bootcamp.exerc8;
 
+
 import br.com.bootcamp.exerc8.contaBancaria.ContaBancaria;
 import br.com.bootcamp.exerc8.contaCorrente.ContaCorrente;
 import br.com.bootcamp.exerc8.contaPoupanca.ContaPoupanca;
@@ -42,7 +43,12 @@ public class Exerc8 {
         contaDoJhonyCorrente.depositar(depositoCorrente);
         contaDoJhonyCorrente.depositar(depositoCorrente);
         contaDoJhonyCorrente.depositar(depositoCorrente);
-        contaDoJhonyCorrente.sacar(saqueCorrente2);
+
+        Relatorio relatorio = new Relatorio();
+        relatorio.gerar((Imprimivel) contaDoJhonyCorrente);
+
+        Relatorio relatorio2 = new Relatorio();
+        relatorio2.gerar((Imprimivel) contaDoJhonyPoupanca);
     }
 
 

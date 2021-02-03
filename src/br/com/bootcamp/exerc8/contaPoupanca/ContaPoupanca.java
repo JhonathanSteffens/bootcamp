@@ -1,10 +1,11 @@
 package br.com.bootcamp.exerc8.contaPoupanca;
 
+import br.com.bootcamp.exerc8.Imprimivel;
 import br.com.bootcamp.exerc8.contaBancaria.ContaBancaria;
 
 import java.math.BigDecimal;
 
-public class ContaPoupanca extends ContaBancaria {
+public class ContaPoupanca extends ContaBancaria implements Imprimivel {
 
     public BigDecimal taxaOperacao;
 
@@ -34,6 +35,19 @@ public class ContaPoupanca extends ContaBancaria {
        System.out.println("Seu deposito foi efetuado com sucesso!");
         System.out.print("Seu novo saldo é: ");
         System.out.println(saldo);
+    }
+
+    @Override
+    public String toString() {
+        return "ContaPoupanca{" +
+                "taxaOperacao=" + taxaOperacao +
+                '}';
+    }
+
+    @Override
+    public void mostrarDados() {
+        System.out.println(toString());
+
     }
 
 }
