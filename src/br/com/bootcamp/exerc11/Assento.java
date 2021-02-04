@@ -1,4 +1,4 @@
-package exerc11;
+package br.com.bootcamp.exerc11;
 
 public class Assento {
     Integer numeroAssento;

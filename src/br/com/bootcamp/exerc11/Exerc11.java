@@ -1,4 +1,4 @@
-package exerc11;
+package br.com.bootcamp.exerc11;
 
 import java.time.LocalDateTime;
 
@@ -21,6 +21,7 @@ public class Exerc11 {
         vooAirlines.ocupa(1);
         vooAirlines.ocupa(2);
         vooAirlines.primeiroLivre();
+        vooAirlines.ocupa(13);
         vooAirlines.proximoLivre(11);
     }
 }

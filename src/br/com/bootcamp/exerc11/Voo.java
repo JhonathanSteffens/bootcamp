@@ -1,4 +1,4 @@
-package exerc11;
+package br.com.bootcamp.exerc11;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class Voo {
 
     public void primeiroLivre(){
         for (int i = 0; i < qtdMaxima; i++){
-            if (assentoList.get(i).estaLivre == true) {
+            if (assentoList.get(i).estaLivre) {
                 System.out.println("O primeiro assento livre é: "+ assentoList.get(i));
                 return;
             }
@@ -31,7 +31,7 @@ public class Voo {
 
     public void proximoLivre(Integer assento){
         for (int i = assento; i < qtdMaxima; i++){
-            if (assentoList.get(i).estaLivre == true) {
+            if (assentoList.get(i).estaLivre) {
                 System.out.println("O próximo assento livre é: "+ assentoList.get(i));
                 return;
             }
@@ -39,8 +39,7 @@ public class Voo {
     }
 
     public void criaAssentos(){
-//        Assento primeiroAssento = new Assento(1,true);
-//        assentoList.add(primeiroAssento);
+
         for (int i = 0; i < qtdMaxima; i++){
             Assento assento = new Assento(i+1, true);
             assentoList.add(assento);
