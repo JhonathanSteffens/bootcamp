@@ -141,11 +141,31 @@ public class Pedido {
                 ", observacao='" + observacao + '\'' +
                 ", formaDePagamento=" + formaDePagamento +
                 ", itens=" + itens +
+                ", pedidoItem=" + pedidoItem +
                 '}';
     }
 
-    public void resumo(Pedido pedido){
-        System.out.println(toString());
+    public StringBuilder resumo(Pedido pedido){
+        StringBuilder string = new StringBuilder();
+        string.append("-------------------------------------------").append("\n");
+        string.append("             Relatório do Pedido           ").append("\n");
+        string.append("-------------------------------------------").append("\n");
+        string.append("Id do Pedido: ").append(pedido.getId()).append("\n");
+        string.append("Nome do Cliente: ").append(pedido.getCliente().getNome()).append("\n");
+        string.append("Nome do Vendedor: ").append(pedido.getVendedor().getNome()).append("\n");
+        string.append("Data de Cadastro: ").append(pedido.getDataCadastro()).append("\n");
+        string.append("Data de Previsão de Entrega: ").append(pedido.getDataPrevisaoEntrega()).append("\n");
+        string.append("Data de Validade: ").append(pedido.getDataValidade()).append("\n");
+        string.append("Endereço de Entrega: ").append(pedido.getEnderecoEntrega()).append("\n");
+        string.append("Observação: ").append(pedido.getObservacao()).append("\n");
+        string.append("Forma de Pagamento: ").append(pedido.getFormaDePagamento().getDescricao()).append("\n");
+        string.append("Id do Item: ").append(pedido.getItens().getId()).append("\n");
+        string.append("Descrição do Item: ").append(pedido.getItens().getDescricao()).append("\n");
+        string.append("Valor Unitário do Item: ").append(pedido.getPedidoItem().getValorUnitario()).append("\n");
+        string.append("Quantidade Adquirida: ").append(pedido.getPedidoItem().getQuantidade()).append("\n");
+        string.append("Valor Total Sem Desconto: ").append(pedido.getPedidoItem().getValorTotalSemDesconto()).append("\n");
+        string.append("Valor Total: ").append(pedido.getPedidoItem().getValorTotal()).append("\n");
+        return string;
     }
 
 }

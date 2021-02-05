@@ -21,16 +21,27 @@ public class PedidoItem {
         return quantidade * valorUnitario;
     }
 
-    @Override
-    public String toString() {
-        return "PedidoItem{" +
-                ", quantidade=" + quantidade +
-                ", valorUnitario=" + valorUnitario +
-                ", valorDesconto=" + valorDesconto +
-                '}';
+    public double getQuantidade() {
+        return quantidade;
     }
 
-    public void resumo(PedidoItem pedidoItem){
-        System.out.println(toString());
+    public void setQuantidade(double quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public double getValorUnitario() {
+        return valorUnitario;
+    }
+
+    public void setValorUnitario(double valorUnitario) {
+        this.valorUnitario = valorUnitario;
+    }
+
+    public double getValorDesconto() {
+        return valorDesconto;
+    }
+
+    public void setValorDesconto(double valorDesconto) {
+        this.valorDesconto = valorDesconto;
     }
 }

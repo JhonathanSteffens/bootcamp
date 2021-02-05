@@ -3,8 +3,7 @@ package br.com.bootcamp.Exerc15.ServiceImpl;
 import br.com.bootcamp.Exerc15.Pedido;
 import br.com.bootcamp.Exerc15.DAO.PedidoDAO;
 import br.com.bootcamp.Exerc15.Service.PedidoService;
-import br.com.bootcamp.Exerc15.ValidacaoPedido.ValorDoDescontoExcedidoException;
-import br.com.bootcamp.Exerc15.Vendedor;
+import br.com.bootcamp.Exerc15.ValidacaoPedido.ValidaPedido;
 
 import java.util.List;
 
@@ -27,12 +26,10 @@ public class PedidoServiceImpl implements PedidoService {
 
     @Override
     public Pedido inserir(Pedido objeto) {
-        if (objeto.getVendedor().getPercentualDescontoMax() < (objeto.getPedidoItem().getValorTotalSemDesconto() - objeto.getPedidoItem().getValorTotal())){
-            throw new ValorDoDescontoExcedidoException("O valor do desconto está acima do Máximo disponível para este vendedor");
-        } else {
-            return dao.inserir(objeto);
-        }
-
+        ValidaPedido validaPedido = new ValidaPedido();
+        validaPedido.validaValorDoDesconto(objeto);
+        System.out.println(objeto.resumo(objeto));
+        return dao.inserir(objeto);
     }
 
     @Override
